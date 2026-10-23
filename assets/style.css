@@ -156,3 +156,11 @@ body{background-attachment:scroll;min-height:100vh}
   padding:6px 18px;border:3px solid var(--gold);border-radius:6px;background:rgba(6,11,8,.55);
   text-shadow:0 0 10px rgba(0,0,0,.8);box-shadow:0 0 18px rgba(212,172,83,.25);white-space:nowrap}
 .ep--soon:hover{border-color:var(--line)}
+
+/* --- Pelivideot --- */
+.clips{display:grid;gap:20px;grid-template-columns:repeat(auto-fill,minmax(320px,1fr))}
+.clip{margin:0;background:linear-gradient(160deg,#11241a,#0a1a1c);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.clip video{display:block;width:100%;aspect-ratio:16/9;background:#000;object-fit:cover}
+.clip figcaption{padding:12px 14px;color:var(--muted);font-size:14px}
+.clip figcaption b{display:block;color:var(--gold-l);font-family:"Cinzel",Georgia,serif;font-size:17px}
+@media (max-width:400px){.clips{grid-template-columns:1fr}}
