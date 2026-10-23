@@ -1,0 +1,158 @@
+/* Crazylaserguy Studio – sivuston tyylit */
+:root{
+  --bg:#060b08;
+  --bg2:#0b1510;
+  --panel:#0f1d16;
+  --line:#1f3a2b;
+  --text:#e6efe9;
+  --muted:#9fb5a8;
+  --green:#22c55e;
+  --green-d:#0a8a2f;
+  --gold:#d4ac53;
+  --gold-l:#f1d179;
+  --red:#e0483e;
+  --deep:#0b3b3d;
+  --radius:14px;
+  --max:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6;font-size:17px}
+img{max-width:100%;display:block}
+a{color:var(--gold-l)}
+a:hover{color:#fff}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+/* Ylävalikko */
+.nav{position:sticky;top:0;z-index:10;background:rgba(6,11,8,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-family:"Cinzel",Georgia,serif;font-weight:700;letter-spacing:.06em}
+.brand img{width:38px;height:38px}
+.nav ul{list-style:none;display:flex;gap:22px;margin:0;padding:0}
+.nav ul a{color:var(--muted);text-decoration:none;font-size:15px}
+.nav ul a:hover,.nav ul a[aria-current]{color:var(--gold-l)}
+@media (max-width:640px){.nav ul{gap:14px}.nav ul a{font-size:14px}.brand span{display:none}}
+
+/* Hero */
+.hero{position:relative;min-height:72vh;display:flex;align-items:flex-end;background:#000 center/cover no-repeat;border-bottom:1px solid var(--line)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(6,11,8,.95) 100%)}
+.hero .wrap{position:relative;z-index:1;padding-bottom:48px;width:100%}
+.hero h1{font-family:"Cinzel",Georgia,serif;font-size:clamp(32px,6vw,64px);line-height:1.1;margin:0 0 10px;letter-spacing:.04em}
+.hero p.lead{font-size:clamp(17px,2.2vw,21px);color:var(--muted);max-width:720px;margin:0 0 24px}
+.motto{font-family:"Cinzel",Georgia,serif;color:var(--gold);letter-spacing:.18em;font-size:14px;text-transform:uppercase;margin:0 0 8px}
+.hero--small{min-height:46vh}
+
+/* Napit */
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;text-decoration:none;font-weight:600;font-size:16px;border:1px solid var(--gold);color:var(--gold-l)}
+.btn--primary{background:var(--green-d);border-color:var(--green);color:#fff}
+.btn:hover{filter:brightness(1.15);color:#fff}
+
+/* Osiot */
+section{padding:72px 0}
+section.alt{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+h2{font-family:"Cinzel",Georgia,serif;font-size:clamp(26px,3.6vw,38px);margin:0 0 12px;letter-spacing:.03em}
+h3{margin:0 0 6px;font-size:20px}
+.sub{color:var(--muted);max-width:760px;margin:0 0 36px}
+
+/* Kortit */
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.card .ico{font-size:28px;margin-bottom:10px}
+.card p{margin:0;color:var(--muted)}
+
+/* Feature-nosto */
+.feature{display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:center}
+@media (max-width:800px){.feature{grid-template-columns:1fr}}
+.media{aspect-ratio:16/9;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:linear-gradient(160deg,#0b3b3d,#04151a)}
+.media img,.media video{width:100%;height:100%;object-fit:cover}
+.placeholder{display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:15px;text-align:center;padding:20px;border:2px dashed var(--line)}
+
+/* Galleria */
+.gallery{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+
+/* Faktalista */
+.facts{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));margin:24px 0 0;padding:0;list-style:none}
+.facts li{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.facts b{display:block;color:var(--gold-l);font-size:14px;font-weight:600}
+
+/* Aikajana */
+.timeline{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+.timeline li{position:relative;padding:0 0 26px 24px}
+.timeline li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--green)}
+.timeline .when{color:var(--gold);font-size:14px;font-weight:600}
+
+/* Alatunniste */
+footer{padding:40px 0;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center}
+footer .seal{display:flex;gap:12px;align-items:center}
+footer img{width:48px;height:48px}
+
+/* --- Liukuvärit CLG-teemalla --- */
+body{background:
+  radial-gradient(1200px 600px at 15% -10%,rgba(34,197,94,.10),transparent 60%),
+  radial-gradient(900px 500px at 100% 30%,rgba(11,59,61,.45),transparent 60%),
+  linear-gradient(180deg,#060b08 0%,#07120d 50%,#04100f 100%);background-attachment:fixed}
+h1,h2{background:linear-gradient(90deg,var(--gold-l) 0%,#fff3c4 35%,var(--gold) 70%,#b88a2e 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+section.alt{background:linear-gradient(135deg,rgba(10,138,47,.10) 0%,rgba(11,59,61,.35) 55%,rgba(6,11,8,.6) 100%)}
+.card{background:linear-gradient(160deg,#11241a 0%,#0c1914 60%,#0a1a1c 100%);transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-3px);border-color:var(--gold)}
+.btn--primary{background:linear-gradient(135deg,#16a34a 0%,#0a8a2f 60%,#065f2a 100%)}
+.btn{background:linear-gradient(135deg,rgba(212,172,83,.10),rgba(212,172,83,0))}
+.media{background:linear-gradient(160deg,#0b3b3d 0%,#062a2c 50%,#020b0c 100%)}
+.nav{border-image:linear-gradient(90deg,transparent,var(--gold),var(--green),transparent) 1}
+footer{border-image:linear-gradient(90deg,transparent,var(--gold),var(--green),transparent) 1}
+.laser-line{height:2px;background:linear-gradient(90deg,transparent,var(--red) 30%,#ff9a8f 50%,var(--red) 70%,transparent);box-shadow:0 0 12px var(--red);border:0;margin:0}
+
+/* --- Korjaukset --- */
+html{background:var(--bg)}
+body{background-attachment:scroll;min-height:100vh}
+/* Hero: taustakuva omana bannerinaan, teksti sinetin alle */
+.hero{display:block;min-height:0;background-size:0 0 !important;background-color:transparent}
+.hero::before{content:"";display:block;width:100%;aspect-ratio:16/9;max-height:78vh;
+  background-image:inherit;background-size:cover;background-position:center;background-repeat:no-repeat;
+  box-shadow:inset 0 -140px 90px -50px var(--bg)}
+.hero::after{display:none}
+.hero .wrap{padding-top:8px;padding-bottom:48px}
+.hero--small::before{max-height:52vh}
+.nav ul a{white-space:nowrap}
+@media (max-width:640px){.nav ul{gap:12px}.nav ul a{font-size:13px}.nav .wrap{height:56px}}
+.facts li{overflow-wrap:anywhere}
+.hero--small::before{max-height:none}
+
+/* --- Videohero ja galleria --- */
+.hero--video::before{display:none}
+.hero-media{position:relative;width:100%;aspect-ratio:16/9;max-height:80vh;overflow:hidden;background:#000}
+.hero-media video,.hero-media img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,11,8,0) 55%,var(--bg) 100%)}
+.shots{display:grid;gap:14px;grid-template-columns:repeat(6,1fr)}
+.shots a{position:relative;display:block;border-radius:12px;overflow:hidden;border:1px solid var(--line);aspect-ratio:16/10}
+.shots a img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.shots a:hover img{transform:scale(1.05)}
+.shots a:hover{border-color:var(--gold)}
+.shots .cap{position:absolute;left:0;right:0;bottom:0;padding:22px 12px 8px;font-size:13px;color:#fff;background:linear-gradient(180deg,transparent,rgba(0,0,0,.8))}
+.shots .big{grid-column:span 3}
+.shots .mid{grid-column:span 2}
+@media (max-width:800px){.shots{grid-template-columns:repeat(2,1fr)}.shots .big,.shots .mid{grid-column:span 1}.shots .big:first-child{grid-column:span 2}}
+.eps{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.ep{display:block;text-decoration:none;color:var(--text);background:linear-gradient(160deg,#11241a,#0a1a1c);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.ep:hover{border-color:var(--gold);color:#fff}
+.ep .th{position:relative;aspect-ratio:16/9;background:#000}
+.ep .th img{width:100%;height:100%;object-fit:cover}
+.ep .th::after{content:"▶";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:34px;color:#fff;text-shadow:0 0 14px #000;opacity:.85}
+.ep .tx{padding:12px 14px}
+.ep .no{color:var(--gold);font-size:13px;font-weight:600}
+.ep .ti{font-size:15px;line-height:1.35}
+
+/* --- Tulossa-jaksot --- */
+.ep--soon .th{display:flex;align-items:center;justify-content:center;overflow:hidden;
+  background:linear-gradient(135deg,#0b3b3d 0%,#062a2c 45%,#0a1a12 100%)}
+.ep--soon .th::after{display:none}
+.ep--soon .th img{width:38%;height:auto;object-fit:contain;opacity:.35;filter:grayscale(.3)}
+.stamp{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-18deg);
+  font-family:"Cinzel",Georgia,serif;font-weight:700;letter-spacing:.2em;font-size:26px;color:var(--gold-l);
+  padding:6px 18px;border:3px solid var(--gold);border-radius:6px;background:rgba(6,11,8,.55);
+  text-shadow:0 0 10px rgba(0,0,0,.8);box-shadow:0 0 18px rgba(212,172,83,.25);white-space:nowrap}
+.ep--soon:hover{border-color:var(--line)}
