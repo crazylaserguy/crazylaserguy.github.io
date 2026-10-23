@@ -176,3 +176,11 @@ body{background-attachment:scroll;min-height:100vh}
 .brand{flex-shrink:0}
 @media (max-width:640px){.nav .wrap{gap:8px;padding:0 12px}.brand img{width:30px;height:30px}.nav ul{gap:9px}.nav ul a{font-size:12px}}
 @media (max-width:360px){.nav ul a{font-size:11px}.nav ul{gap:7px}}
+
+/* --- Musiikkinappi --- */
+.music-btn{position:fixed;right:16px;bottom:16px;z-index:20;display:flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;
+  border:1px solid var(--gold);background:rgba(6,11,8,.85);backdrop-filter:blur(6px);color:var(--gold-l);font:600 13px "Inter",system-ui,sans-serif;cursor:pointer;box-shadow:0 0 14px rgba(212,172,83,.2)}
+.music-btn .ico{font-size:16px;line-height:1}
+.music-btn[aria-pressed="false"]{color:var(--muted);border-color:var(--line)}
+.music-btn:hover{border-color:var(--gold);color:#fff}
+@media (max-width:640px){.music-btn{right:12px;bottom:12px;padding:8px 11px}.music-btn .txt{display:none}}
