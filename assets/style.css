@@ -164,3 +164,15 @@ body{background-attachment:scroll;min-height:100vh}
 .clip figcaption{padding:12px 14px;color:var(--muted);font-size:14px}
 .clip figcaption b{display:block;color:var(--gold-l);font-family:"Cinzel",Georgia,serif;font-size:17px}
 @media (max-width:400px){.clips{grid-template-columns:1fr}}
+
+/* --- Kielivalinta --- */
+.lang{display:flex;gap:6px;margin-left:8px}
+.lang a{display:flex;align-items:center;gap:5px;padding:4px 7px;border:1px solid var(--line);border-radius:6px;color:var(--muted);text-decoration:none;font-size:12px;font-weight:600;letter-spacing:.05em}
+.lang a svg{width:20px;height:13px;display:block;border-radius:2px}
+.lang a[aria-current]{border-color:var(--gold);color:var(--gold-l)}
+.lang a:hover{border-color:var(--gold);color:#fff}
+.nav ul{margin-left:auto}
+@media (max-width:640px){.lang{gap:4px;margin-left:4px}.lang a{padding:3px 4px}.lang a span{display:none}.nav ul{gap:10px}.nav ul a{font-size:12.5px}}
+.brand{flex-shrink:0}
+@media (max-width:640px){.nav .wrap{gap:8px;padding:0 12px}.brand img{width:30px;height:30px}.nav ul{gap:9px}.nav ul a{font-size:12px}}
+@media (max-width:360px){.nav ul a{font-size:11px}.nav ul{gap:7px}}
